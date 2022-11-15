@@ -69,7 +69,7 @@ int main(int argc, char **argv) {
   string LastWord = "";
 
   while (!S2Ceq(LastWord, "!exit")) {
-    while (!S2Ceq(LastWord, "$!") && !S2Ceq(LastWord, "!")&&!S2Ceq(LastWord, "b!")) {
+    while (!S2Ceq(LastWord, "$!") && !S2Ceq(LastWord, "!")&&!S2Ceq(LastWord, "b!")&&!S2Ceq(LastWord, "!exit")) {
       cin >> LastWord;
       LastWords.push_back(LastWord);
     }
