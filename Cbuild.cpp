@@ -69,15 +69,15 @@ int main(int argc, char **argv) {
   string LastWord = "";
 
   while (!S2Ceq(LastWord, "!exit")) {
-    while (!S2Ceq(LastWord, "$!E") && !S2Ceq(LastWord, "!E")&&!S2Ceq(LastWord, "b!E")) {
+    while (!S2Ceq(LastWord, "$!") && !S2Ceq(LastWord, "!")&&!S2Ceq(LastWord, "b!")) {
       cin >> LastWord;
       LastWords.push_back(LastWord);
     }
 
-    if (S2Ceq(LastWord, "$!E")) {
+    if (S2Ceq(LastWord, "$!")) {
       system(GetfromuntilEnd().c_str());
     }
-    if (S2Ceq(LastWord, "b!E")) {
+    if (S2Ceq(LastWord, "b!")) {
       BrainFuckInterpreter::Execute(GetfromuntilEnd());
       BrainFuckInterpreter::Reset();
     }
